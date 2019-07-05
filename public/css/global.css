@@ -48,11 +48,6 @@ a.visited {
 	box-shadow: 0 1px 0 0 #d47ee9;
 }
 
-footer {
-	margin-top: 3rem;
-	margin-bottom: 3rem;
-}
-
 .hljs-comment,
 .hljs-quote {
 	color: #999580;

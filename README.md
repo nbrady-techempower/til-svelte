@@ -40,7 +40,5 @@ So, make sure you have the `.webp` counterpart in the same location.
 ## TODOs
 
  - [ ] Embedded twitter markdown
- - [ ] Static site generator, or nah?
- - [ ] Meta site info and for individual blog posts
+ - [ ] Meta info for individual blog posts
  - [ ] Automatic deployments
- - [ ] Comments with discord or something?

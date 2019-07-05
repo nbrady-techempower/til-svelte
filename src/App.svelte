@@ -6,6 +6,8 @@
   import BlogView from "./views/Blog.svelte";
   import HomeView from "./views/Home.svelte";
 
+  import Footer from "./components/Footer.svelte";
+
   export let url = "";
 </script>
 
@@ -34,10 +36,6 @@
       />
     </Route>
   {/each}
-
-  <footer class="colored-links">
-    <a href={config.twitterLink}>Twitter</a>
-    {" • "}
-    <a href={config.githubLink}>GitHub</a>
-  </footer>
 </Router>
+
+<Footer />

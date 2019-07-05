@@ -3,6 +3,7 @@
   import config from "../config";
   import marked from "../utils/marked";
   import AuthorCallout from "../components/AuthorCallout.svelte";
+  import Disqus from "../components/Disqus.svelte";
   export let blog, prevBlog, nextBlog;
 
   let width = 0;
@@ -58,6 +59,7 @@
       </div>
     {/if}
   </div>
+  <Disqus {blog} />
 </div>
 
 <style>
