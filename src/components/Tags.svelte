@@ -1,12 +1,15 @@
 <script>
-  export let tags, toggleFilter;
+  export let tags, toggleFilter, filterByTags;
 </script>
 
 <div>
   {#if tags && tags.length}
     <div class="tags flex-row-wrap">
       {#each tags as tag, idx}
-        <div class="tag" on:click={() => toggleFilter(tag)}>
+        <div
+          class="tag {filterByTags.includes(tag) ? 'selected' : ''}"
+          on:click={() => toggleFilter(tag)}
+        >
           {tag}
         </div>
       {/each}
@@ -26,5 +29,9 @@
     padding: 5px 8px;
     margin-right: 5px;
     cursor: pointer;
+  }
+  .tag.selected {
+    background: #785482;
+    border: 1px solid #573a5f;
   }
 </style>

@@ -11,9 +11,9 @@
   let filterByTags = [];
   let showFilters = false;
   const toggleFilter = (tag) => {
-    const newFilter = filterByTags.splice();
+    const newFilter = filterByTags.slice();
     const idx = newFilter.indexOf(tag);
-
+    console.log(newFilter, tag, idx);
     if (idx > -1) {
       newFilter.splice(idx, 1);
     } else {
@@ -23,7 +23,21 @@
     filterByTags = newFilter;
   };
 
-  const shouldShow = (blog) => {
+  /**
+  * shouldShow() is being used in an #if block within an #each block
+  * below, but that part of the component isn't re-rendering when
+  * filterByTags changed. We could achieve the re-rendering in two ways:
+  *
+  * 1) {#if filterByTags && shouldShow(blog)}
+  *   Now that we've added filterByTags to the expression, if filterByTags
+  *   is reassigned, the expression is re-evaluated and the block is re-rendered.
+  *   This is how I was doing it before.
+  *
+  * 2) We don't mess with the logic and instead make a reactive function. If
+  *    any of the outer scoped variables used within shouldShow change, shouldShow
+  *    will update and any block referencing shouldShow will be re-evaluated.
+  */
+  $: shouldShow = (blog) => {
     if (filterByTags.length > 0) {
       // this post doesn't have tags
       if (!blog.tags) return false;
@@ -68,12 +82,12 @@
       {/if}
     </div>
     {#if showFilters}
-      <Tags tags={availableTags} {toggleFilter} />
+      <Tags tags={availableTags} {toggleFilter} {filterByTags} />
     {/if}
   </div>
 
   {#each blogEntries as b}
-    {#if filterByTags && shouldShow(b)}
+    {#if shouldShow(b)}
         <div class="post">
           <div class="title-font post-title">
             <a href="{'/' + b.slug}">{b.title}</a>
@@ -82,7 +96,7 @@
             <div class="date">{b.date}</div>
           </div>
           <div class="preview">{b.preview}</div>
-          <Tags tags={b.tags} {toggleFilter} />
+          <Tags tags={b.tags} {toggleFilter} {filterByTags} />
         </div>
     {/if}
   {/each}

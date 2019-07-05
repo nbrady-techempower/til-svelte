@@ -18,7 +18,7 @@
   let text;
   async function getData() {
     let data = await fetch(`/assets/blogs/${blog.slug}/index.md`);
-    text = await data.text();
+    text = marked(await data.text());
   }
   getData();
 </script>
@@ -36,7 +36,7 @@
 
   {#if text}
     <div class="post-text colored-links">
-      {@html marked(text)}
+      {@html text}
     </div>
   {:else}
     <div>Loading ...</div>
