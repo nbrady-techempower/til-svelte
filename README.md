@@ -1,68 +1,46 @@
-*Psst — looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
+# Today I learned - Blog
 
----
+[https://til.evermoredev.com](https://til.evermoredev.com)
 
-# svelte app
+This is a personal blog project with a simple look and feel
+in the style of Dan Abramov's [Overreacted](https://overreacted.io)
+but written with Svelte.
 
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
+Want to steal for yourself?
 
-To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
+Fork the repo and edit the files in the `src/config` folder. They're
+pretty self explanatory. Make sure the `slug` property in `src/config/blogEntries.js`
+matches a folder in `public/assets/blogs`. The blog entries later in the array
+are displayed first; they're not sorted by date.
 
-```bash
-npx degit sveltejs/template svelte-app
-cd svelte-app
-```
+I plan on adding more configurable options, including some themes, shortly.
 
-*Note that you will need to have [Node.js](https://nodejs.org) installed.*
-
-
-## Get started
-
-Install the dependencies...
+To run locally, simply:
 
 ```bash
-cd svelte-app
-npm install
+yarn
+
+yarn start
 ```
 
-...then start [Rollup](https://rollupjs.org):
+Build for production:
 
 ```bash
-npm run dev
+yarn build
 ```
 
-Navigate to [localhost:5000](http://localhost:5000). You should see your app running. Edit a component file in `src`, save it, and reload the page to see your changes.
+## Custom Markdown
 
+Any `.png` and `.jpeg` images will produce a `<picture>` tag in the html
+output and include a `srcset` attribute for that image's `.webp` counterpart.
+So, make sure you have the `.webp` counterpart in the same location.
 
-## Deploying to the web
+`[youtube=someVideoID]` will produce an embedded YouTube player for that video
 
-### With [now](https://zeit.co/now)
+## TODOs
 
-Install `now` if you haven't already:
-
-```bash
-npm install -g now
-```
-
-Then, from within your project folder:
-
-```bash
-now
-```
-
-As an alternative, use the [Now desktop client](https://zeit.co/download) and simply drag the unzipped project folder to the taskbar icon.
-
-### With [surge](https://surge.sh/)
-
-Install `surge` if you haven't already:
-
-```bash
-npm install -g surge
-```
-
-Then, from within your project folder:
-
-```bash
-npm run build
-surge public
-```
+ - [ ] Embedded twitter markdown
+ - [ ] Static site generator, or nah?
+ - [ ] Meta site info and for individual blog posts
+ - [ ] Automatic deployments
+ - [ ] Comments with discord or something?

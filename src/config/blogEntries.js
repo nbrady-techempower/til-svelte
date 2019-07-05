@@ -1,5 +1,12 @@
 const entries = [
   {
+    title: "Svelte: First Impressions",
+    date: "July 5th, 2019",
+    slug: "svelte-first-impressions",
+    tags: ["svelte", "web"],
+    preview: "I didn't want it to happen like this. It's not you; it's me."
+  },
+  {
     title: "Don't Overlook Simple Image Optimizations",
     date: "June 28th, 2019",
     slug: "simple-img-optimizations",

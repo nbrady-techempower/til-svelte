@@ -3,6 +3,7 @@
   import blogEntries from "../config/blogEntries";
   import AuthorCallout from "../components/AuthorCallout.svelte";
   import Tags from "../components/Tags.svelte";
+  import { slide } from "svelte/transition";
 
   let availableTags = [];
   blogEntries.forEach((b) => (availableTags = availableTags.concat(b.tags)));
@@ -88,7 +89,7 @@
 
   {#each blogEntries as b}
     {#if shouldShow(b)}
-        <div class="post">
+        <div class="post" transition:slide={{ duration: 200 }}>
           <div class="title-font post-title">
             <a href="{'/' + b.slug}">{b.title}</a>
           </div>

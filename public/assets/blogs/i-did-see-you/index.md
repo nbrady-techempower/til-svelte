@@ -29,7 +29,7 @@ Some other things you may see blog posts about include poker, baseball, investin
 politics daily, I'll probably stay away from that here, but that's not a promise.
 
 Mostly, this is a place where I can look at an archive of my bad ideas and
-opinions and see how just how much I've grown. I plan on having some pretty bad
+opinions and see just how much I've grown. I plan on having some pretty bad
 opinions, corny blog posts, and being categorically wrong sometimes. When that
 happens, feel free to [tweet at me](https://twitter.com/natebrady23) and I'll make
 sure to stand my ground.

@@ -133,4 +133,30 @@
   .post-text :global(pre code) {
     background-color: #011627;
   }
+
+  .post-text :global(blockquote p:before) {
+    content: '“';
+    color: #d47ee9;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-right: .3rem;
+  }
+  .post-text :global(blockquote) {
+    /*color: #b1b1b1;*/
+    font-size: 1.5rem;
+    padding-top: .8rem;
+    padding-bottom: .8rem;
+  }
+  .post-text :global(blockquote p) {
+    margin: 0;
+    display: inline-block;
+  }
+
+  .post-text :global(.youtube) {
+    display: flex;
+    width: 80%;
+    height: 41.1vw;
+    margin: 3rem auto;
+    max-height: 283.5px;
+  }
 </style>

@@ -40,4 +40,14 @@ marked.setOptions({
   }
 });
 
-export default marked;
+const _marked = (text) => {
+  const youTubeBegin = `<iframe class="youtube" src="https://www.youtube.com/embed/`;
+  const youTubeEnd = `" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+  text = text.replace(
+    /\[youtube=([^\]]+)\]/g,
+    `${youTubeBegin}$1${youTubeEnd}`
+  );
+  return marked(text);
+};
+
+export default _marked;
