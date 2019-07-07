@@ -69,10 +69,10 @@
     left: 0;
     right: 0;
     height: 4px;
-    background: #d47ee9;
+    background: var(--main-highlight-color);
   }
   .blog-title {
-    color: #d47ee9;
+    color: var(--main-highlight-color);
     font-size: 1.3rem;
     margin-bottom: 4.5rem;
   }
@@ -85,7 +85,7 @@
   .post-title {
     font-size: 2.3rem;
     margin-bottom: 0.5rem;
-    color: white;
+    color: var(--post-title-color);
   }
   .post-header .date {
     font-size: 0.8rem;
@@ -138,7 +138,7 @@
 
   .post-text :global(blockquote p:before) {
     content: '“';
-    color: #d47ee9;
+    color: var(--main-highlight-color);
     font-size: 2.2rem;
     font-weight: bold;
     margin-right: .3rem;

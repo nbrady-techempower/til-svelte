@@ -89,6 +89,34 @@ _(labels)_ to denote a reactive variable, like `$: myVar`. Since they use the
 terms "props" and "children" in their nomenclature, maybe a label would have
 been better: `props: myPropFromParent, anotherProp;`
 
+I also like how the mustache-like syntax in the template rendering is easier
+to read than in React. Take the following code examples rendering an array
+of shopping item names if the quantity is greater than 0. First in React:
+
+```javascript
+{items.map((item, idx) => {
+  if (item.qty) {
+    return (
+      <div key={idx}>{item.name}</div>
+    );
+  }
+})}
+```
+
+Now in Svelte:
+
+```
+{#each items as item}
+  {#if item.qty}
+    <div>{item.name}</div>
+  {/if}
+{/each}
+```
+
+To me, though my experience allows for me to easily understand the former, the latter
+is clearly more readable. I will admit that, at first, I hated seeing this
+syntax again, but I soon came to realize its value.
+
 I rewrote this blog application, pixel for pixel, in about 2 hours and without
 a real deep knowledge of Svelte. React components were just easy to reason
 about in Svelte. I think that's a credit to both technologies.
@@ -102,6 +130,7 @@ improvements, there's always something to be excited about. Maybe there's
 room in my heart for both of you.
 
 Maybe I'll come back here and add more to this, but this wasn't meant to be
-a tutorial and I've only scratched the surface.
+a tutorial and I've only scratched the surface. There's a lot more that Svelte
+has to offer and I'm excited to see where it goes.
 
 [Here's the rewrite of the blog app](https://github.com/nbrady-techempower/til-svelte)

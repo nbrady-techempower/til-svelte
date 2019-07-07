@@ -22,16 +22,16 @@
     margin-top: .6rem;
   }
   .tag {
-    background: #573a5f;
+    background: var(--tag-bg);
     border-radius: 5px;
-    color: white;
+    color: var(--tag-font-color);
     font-size: 0.8rem;
     padding: 5px 8px;
     margin-right: 5px;
     cursor: pointer;
   }
   .tag.selected {
-    background: #785482;
-    border: 1px solid #573a5f;
+    background: var(--tag-selected);
+    border: 1px solid var(--tag-bg);
   }
 </style>

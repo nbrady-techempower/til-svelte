@@ -126,7 +126,7 @@
     margin-bottom: 3.5rem;
   }
   .post-title {
-    color: #d47ee9;
+    color: var(--main-highlight-color);
     font-size: 1.65rem;
     margin-bottom: 0.6rem;
   }
@@ -142,11 +142,11 @@
   .triangle.right {
     border-top: 6px solid transparent;
     border-bottom: 6px solid transparent;
-    border-left: 6px solid #d47ee9;
+    border-left: 6px solid var(--main-highlight-color);
   }
   .triangle.down {
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
-    border-top: 6px solid #d47ee9;
+    border-top: 6px solid var(--main-highlight-color);
   }
 </style>

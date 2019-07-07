@@ -13,7 +13,9 @@ pretty self explanatory. Make sure the `slug` property in `src/config/blogEntrie
 matches a folder in `public/assets/blogs`. The blog entries later in the array
 are displayed first; they're not sorted by date.
 
-I plan on adding more configurable options, including some themes, shortly.
+To change the core theme, edit the variables in `public/css/global.css`. All the
+colors except the code block colors are in the `:root` selector at the top of
+the file.
 
 To run locally, simply:
 

@@ -6,7 +6,18 @@
 	-webkit-overflow-scrolling: touch;
 }
 
-html, body, #root {
+:root {
+	--main-highlight-color: #d47ee9;
+	--main-bg: #282c35;
+	--main-font-color: hsla(0,0%,100%,0.88);
+    --post-title-color: white;
+
+	--tag-bg: #573a5f;
+	--tag-selected: #785482;
+	--tag-font-color: white;
+}
+
+html, body {
 	height: 100%;
 	min-height: 100%;
 	padding: 0;
@@ -17,8 +28,8 @@ body {
 	font-family: 'Merriweather','Georgia',serif;
 	word-wrap: break-word;
 	font-kerning: normal;
-	background-color: #282c35;
-	color: hsla(0,0%,100%,0.88);
+	background-color: var(--main-bg);
+	color: var(--main-font-color);
 	max-width: 42rem;
 	padding: 2.625rem 1.3125rem;
 	margin-left: auto;
@@ -44,8 +55,8 @@ a.visited {
 }
 
 .colored-links a {
-	color: #d47ee9;
-	box-shadow: 0 1px 0 0 #d47ee9;
+	color: var(--main-color);
+	box-shadow: 0 1px 0 0 var(--main-color);
 }
 
 .hljs-comment,
