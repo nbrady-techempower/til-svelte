@@ -1,5 +1,12 @@
 const entries = [
   {
+    title: "Advanced Port Scanning",
+    date: "July 8th, 2019",
+    slug: "advanced-port-scanning",
+    tags: ["ceh"],
+    preview: "What's involved in an advanced port scan?"
+  },
+  {
     title: "Svelte: First Impressions",
     date: "July 5th, 2019",
     slug: "svelte-first-impressions",
