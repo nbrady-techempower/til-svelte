@@ -25,19 +25,19 @@
   };
 
   /**
-  * shouldShow() is being used in an #if block within an #each block
-  * below, but that part of the component isn't re-rendering when
-  * filterByTags changed. We could achieve the re-rendering in two ways:
-  *
-  * 1) {#if filterByTags && shouldShow(blog)}
-  *   Now that we've added filterByTags to the expression, if filterByTags
-  *   is reassigned, the expression is re-evaluated and the block is re-rendered.
-  *   This is how I was doing it before.
-  *
-  * 2) We don't mess with the logic and instead make a reactive function. If
-  *    any of the outer scoped variables used within shouldShow change, shouldShow
-  *    will update and any block referencing shouldShow will be re-evaluated.
-  */
+   * shouldShow() is being used in an #if block within an #each block
+   * below, but that part of the component isn't re-rendering when
+   * filterByTags changed. We could achieve the re-rendering in two ways:
+   *
+   * 1) {#if filterByTags && shouldShow(blog)}
+   *   Now that we've added filterByTags to the expression, if filterByTags
+   *   is reassigned, the expression is re-evaluated and the block is re-rendered.
+   *   This is how I was doing it before.
+   *
+   * 2) We don't mess with the logic and instead make a reactive function. If
+   *    any of the outer scoped variables used within shouldShow change, shouldShow
+   *    will update and any block referencing shouldShow will be re-evaluated.
+   */
   $: shouldShow = (blog) => {
     if (filterByTags.length > 0) {
       // this post doesn't have tags
@@ -52,7 +52,7 @@
       return found;
     }
     return true;
-  }
+  };
 </script>
 
 <!-- Component -->
@@ -69,15 +69,13 @@
   <div class="filter-group">
     <div
       class="filter-header flex-row flex-aic"
-      on:click={() => showFilters = !showFilters}
-    >
-      <div class="triangle {showFilters ? 'down' : 'right'}"></div>
+      on:click={() => (showFilters = !showFilters)}>
+      <div class="triangle {showFilters ? 'down' : 'right'}" />
       Filter Posts by Tags
       {#if filterByTags.length}
         <span
           class="clear-filter"
-          on:click|stopPropagation={() => filterByTags = []}
-        >
+          on:click|stopPropagation={() => (filterByTags = [])}>
           &nbsp;(Clear All)
         </span>
       {/if}
@@ -89,16 +87,16 @@
 
   {#each blogEntries as b}
     {#if shouldShow(b)}
-        <div class="post" transition:slide={{ duration: 200 }}>
-          <div class="title-font post-title">
-            <a href="{'/' + b.slug}">{b.title}</a>
-          </div>
-          <div class="post-stats flex-row flex-aic">
-            <div class="date">{b.date}</div>
-          </div>
-          <div class="preview">{b.preview}</div>
-          <Tags tags={b.tags} {toggleFilter} {filterByTags} />
+      <div class="post" transition:slide={{ duration: 200 }}>
+        <div class="title-font post-title">
+          <a href={'/' + b.slug}>{b.title}</a>
         </div>
+        <div class="post-stats flex-row flex-aic">
+          <div class="date">{b.date}</div>
+        </div>
+        <div class="preview">{b.preview}</div>
+        <Tags tags={b.tags} {toggleFilter} {filterByTags} />
+      </div>
     {/if}
   {/each}
 
@@ -137,7 +135,7 @@
   .triangle {
     width: 0;
     height: 0;
-    margin-right: .3rem;
+    margin-right: 0.3rem;
   }
   .triangle.right {
     border-top: 6px solid transparent;

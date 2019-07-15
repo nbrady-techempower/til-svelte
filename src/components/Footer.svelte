@@ -15,12 +15,12 @@
 
 <style>
   footer {
-	margin-top: 3rem;
-	margin-bottom: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
   }
   .copyright {
     margin-top: 3rem;
-    font-size: .7rem;
+    font-size: 0.7rem;
     color: darkgray;
   }
 </style>

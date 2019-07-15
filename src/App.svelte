@@ -11,7 +11,7 @@
   export let url = "";
 </script>
 
-<Router url="{url}">
+<Router {url}>
   <Route path="/">
     <HomeView />
   </Route>
@@ -19,21 +19,15 @@
   <Route>
     <BlogView
       path="/light-theme"
-      blog={{
-        title: "A Light Theme?",
-        date: "Never",
-        slug: "light-theme"
-      }}
-    />
+      blog={{ title: 'A Light Theme?', date: 'Never', slug: 'light-theme' }} />
   </Route>
 
   {#each blogEntries as blog, idx}
-    <Route path="{blog.slug}">
+    <Route path={blog.slug}>
       <BlogView
         {blog}
         nextBlog={blogEntries[idx - 1]}
-        prevBlog={blogEntries[idx + 1]}
-      />
+        prevBlog={blogEntries[idx + 1]} />
     </Route>
   {/each}
 </Router>

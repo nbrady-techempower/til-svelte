@@ -3,10 +3,11 @@
 </script>
 
 <div class="author-callout flex-row colored-links">
-  <img src="{config.authorImg}" alt="{config.author}" />
+  <img src={config.authorImg} alt={config.author} />
   <div class="flex-col flex-jcc">
     <div class="authored-by">
-      A blog by <a href="{config.twitterLink}">{config.author}</a>
+      A blog by
+      <a href={config.twitterLink}>{config.author}</a>
     </div>
     <div>{config.authorQuote}</div>
   </div>
@@ -17,7 +18,7 @@
     margin-bottom: 5rem;
   }
   .authored-by {
-    margin-bottom: .3rem;
+    margin-bottom: 0.3rem;
   }
   img {
     margin-right: 0.875rem;

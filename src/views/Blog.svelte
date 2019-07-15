@@ -13,7 +13,7 @@
     const currHeight = window.pageYOffset + html.clientHeight;
     return Math.round((currHeight / totalHeight) * 100);
   };
-  const onScroll = () => width = getReaderPerc();
+  const onScroll = () => (width = getReaderPerc());
   window.addEventListener("scroll", onScroll, false);
 
   let text;
@@ -25,7 +25,7 @@
 </script>
 
 <div>
-  <div class="progress-bar" style="width: {width}%;"></div>
+  <div class="progress-bar" style="width: {width}%;" />
   <div class="blog-title title-font">
     <Link to="/">{config.blogTitle}</Link>
   </div>
@@ -44,18 +44,18 @@
   {/if}
 
   <div class="blog-title title-font blog-title-bottom">
-    <Link to={"/"}>{config.blogTitle}</Link>
+    <Link to={'/'}>{config.blogTitle}</Link>
   </div>
   <AuthorCallout />
   <div class="more-posts flex-row-wrap colored-links">
     {#if prevBlog}
       <div class="flex-1">
-        <Link to={"/" + prevBlog.slug}>← {prevBlog.title}</Link>
+        <Link to={'/' + prevBlog.slug}>← {prevBlog.title}</Link>
       </div>
     {/if}
     {#if nextBlog}
       <div class="flex-1">
-        <Link to={"/" + nextBlog.slug}>{nextBlog.title} →</Link>
+        <Link to={'/' + nextBlog.slug}>{nextBlog.title} →</Link>
       </div>
     {/if}
   </div>
@@ -137,17 +137,17 @@
   }
 
   .post-text :global(blockquote p:before) {
-    content: '“';
+    content: "“";
     color: var(--main-highlight-color);
     font-size: 2.2rem;
     font-weight: bold;
-    margin-right: .3rem;
+    margin-right: 0.3rem;
   }
   .post-text :global(blockquote) {
     /*color: #b1b1b1;*/
     font-size: 1.5rem;
-    padding-top: .8rem;
-    padding-bottom: .8rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
   }
   .post-text :global(blockquote p) {
     margin: 0;
