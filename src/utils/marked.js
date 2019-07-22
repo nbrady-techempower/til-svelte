@@ -32,7 +32,13 @@ renderer.image = function(href, title, text) {
 
 marked.setOptions({
   renderer,
-  highlight: function(code) {
+  highlight: function(code, codeType) {
+    if (codeType === "text") {
+      return code;
+    }
+    if (codeType) {
+      return hljs.highlight(codeType, code).value;
+    }
     return hljs.highlightAuto(code).value;
   },
   image: function() {

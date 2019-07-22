@@ -55,8 +55,8 @@ a.visited {
 }
 
 .colored-links a {
-	color: var(--main-color);
-	box-shadow: 0 1px 0 0 var(--main-color);
+	color: var(--main-highlight-color);
+	box-shadow: 0 1px 0 0 var(--main-highlight-color);
 }
 
 .hljs-comment,
