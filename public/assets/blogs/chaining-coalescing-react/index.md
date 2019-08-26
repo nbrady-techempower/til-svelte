@@ -137,7 +137,7 @@ evaluates to **ONLY** `null` or `undefined` **NOT** other falsy values, it's
 what we want:
 
 ```javascript
-const cost = data.item.cost ?? 0;
+const cost = data.item.cost ?? 5;
 ```
 
 You can do the same when you want, for instance, a default title but you want
