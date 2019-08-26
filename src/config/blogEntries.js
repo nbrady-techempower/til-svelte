@@ -1,10 +1,17 @@
 const entries = [
+  // {
+  //   title: "Advanced Port Scanning",
+  //   date: "July 8th, 2019",
+  //   slug: "advanced-port-scanning",
+  //   tags: ["ceh"],
+  //   preview: "What's involved in an advanced port scan?"
+  // },
   {
-    title: "Advanced Port Scanning",
-    date: "July 8th, 2019",
-    slug: "advanced-port-scanning",
-    tags: ["ceh"],
-    preview: "What's involved in an advanced port scan?"
+    title: "Optional Chaining, Nullish Coalescing, and React",
+    date: "August 26th, 2019",
+    slug: "chaining-coalescing-react",
+    tags: ["javascript", "react", "web"],
+    preview: "Get excited about these new language features!"
   },
   {
     title: "Svelte: First Impressions",
