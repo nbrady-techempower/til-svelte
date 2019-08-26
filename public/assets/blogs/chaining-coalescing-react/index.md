@@ -58,7 +58,7 @@ Now we're making sure `board` is defined before accessing the title. Optional
 chaining allows us to do this with one new operator: `?`.
 
 ```jsx harmony
-{data.board?.title ? (...)}
+{data.board?.title ? (<Stuff />) : (<Loading />)}
 ```
 
 If `board` is `null` or `undefined` the expression while evaluate to `undefined`
@@ -110,7 +110,7 @@ React simply won't add anything to the DOM.
 
 This next proposal is a lot simpler than its name. It introduces the nullary
 coalescing operator: `??`. If anything on the left-hand side of this operator
-is `null` or `undefined` than the right-hand side is returned.
+is `null` or `undefined` then the right-hand side is returned.
 
 ```javascript
 const defaultTitle = data.title ?? "No Title!";

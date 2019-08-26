@@ -63,7 +63,8 @@ Now that we know what port scanning is and what types of port scans are
 available to us, we need a tool to help us do the job. By far, the most
 popular port scanning tool is [Nmap](https://nmap.org). Nmap is over
 20 years old and is still being updated pretty regularly. Check out the
-[official site](https://nmap.org) to see the other things it can do from [banner grabbing](https://en.wikipedia.org/wiki/Banner_grabbing) to
+[official site](https://nmap.org) to see the other things it can do from
+[banner grabbing](https://en.wikipedia.org/wiki/Banner_grabbing) to
 [hacking Matt Damon's brain in Elysium](https://nmap.org/movies/#elysium)
 and for more complete documentation.
 
@@ -167,5 +168,3 @@ cool resources, though.
 * **IDS**: Intrusion Detection System
 * **RST**: Reset
 * **SYN**: Synchronize
-
-
